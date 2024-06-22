@@ -1,6 +1,6 @@
 # css-tricks
 
-# CSS Reset June 2024
+## CSS Reset June 2024
 
 ```css
 /* CSS RESET June 2024 */
@@ -32,3 +32,5 @@ img, video, svg { height: auto; max-width: 100%; }
 	}
 }
 ```
+
+
