@@ -33,7 +33,7 @@ img, video, svg { height: auto; max-width: 100%; }
 }
 ```
 
-## CSS para que automáticamente se puedan alinear imagenes en un grid y que sea responsive:
+## CSS para que automáticamente se puedan alinear imágenes en un grid y que sea responsive:
 
 1. Image in grid
 
@@ -60,3 +60,18 @@ div {
   justify-content: center;
   gap: 2rem;
 ```
+
+## [Varias formas de centrar un elemento verticalmente](https://midu.dev/centrar-elementos-css/)
+
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+[Demo](https://codi.link/PGRpdiBjbGFzcz0nY29udGFpbmVyJz4KICA8aDE+VGV4dG8gY2VudHJhZG88L2gxPgo8L2Rpdj4=%7CLmNvbnRhaW5lciB7CiAgZGlzcGxheTogZmxleDsKICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICBhbGlnbi1pdGVtczogY2VudGVyOwp9CgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCmJvZHkgewogIGJhY2tncm91bmQ6ICMwOWY7CiAgZm9udC1mYW1pbHk6IHN5c3RlbS11aTsKfQoKaDEgewogIGJhY2tncm91bmQ6ICNmZmY7CiAgcGFkZGluZzogMTZweDsKfQoKLmNvbnRhaW5lciB7CiAgaGVpZ2h0OiA5NnZoOwp9%7C)
+
+
+
