@@ -61,7 +61,7 @@ div {
   gap: 2rem;
 ```
 
-## [Varias formas de centrar un elemento verticalmente](https://midu.dev/centrar-elementos-css/)
+## Varias formas de centrar un elemento verticalmente. [Fuente midu.dev](https://midu.dev/centrar-elementos-css/)
 
 ```css
 .container {
