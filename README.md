@@ -75,5 +75,62 @@ _[Fuente midu.dev](https://midu.dev/centrar-elementos-css/)_
 
 [Demo](https://codi.link/PGRpdiBjbGFzcz0nY29udGFpbmVyJz4KICA8aDE+VGV4dG8gY2VudHJhZG88L2gxPgo8L2Rpdj4=%7CLmNvbnRhaW5lciB7CiAgZGlzcGxheTogZmxleDsKICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICBhbGlnbi1pdGVtczogY2VudGVyOwp9CgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCmJvZHkgewogIGJhY2tncm91bmQ6ICMwOWY7CiAgZm9udC1mYW1pbHk6IHN5c3RlbS11aTsKfQoKaDEgewogIGJhY2tncm91bmQ6ICNmZmY7CiAgcGFkZGluZzogMTZweDsKfQoKLmNvbnRhaW5lciB7CiAgaGVpZ2h0OiA5NnZoOwp9%7C)
 
+## Equivalente entre `mask` y `background-image" para solucionar problema de compatibilidad que dificulta que se muestren correctamente imágenes de background en firefox, la solución sería *convertir los mask en background-image*
+
+```css
+.class-example {
+        margin-right: 5px;
+        width: 25px;
+        height: 20px;
+        background-color: black;
+        mask: url("images/mask-image.svg") no-repeat center;
+      }
+
+      &:hover .class-example {
+        background-color: white;
+        mask: url("images/mask-image-new.svg") no-repeat center;
+      }
+```
+
+Correction replacing `mask` for `background-image`:
+
+```css
+.class-example {
+	background-color: white;
+        background-image: url("images/mask-image.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 20px;
+        margin-right: 5px;
+        width: 25px;
+      }
+
+      &:hover .class-example {
+        background-image: url("images/mask-image.svg");
+        background-color: var(black);
+        color: #fff;
+      }
+```
+
+Better not use `inherited`: 
+
+```css
+.class-example {
+	background-color: var(white);
+        background-image: url("images/mask-image.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 20px;
+        margin-right: 5px;
+        width: 25px;
+
+	&.hovered {
+        background-image: url("images/mask-image.svg");
+        background-color: black;
+        color: #fff;
+      }
+}
+```
+
 
 
